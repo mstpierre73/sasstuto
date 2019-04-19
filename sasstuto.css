@@ -37,17 +37,20 @@ li {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    width: 14%; }
+    width: 16.66667%; }
   #main-nav a {
     color: #f8f9fb;
     text-decoration: none;
     padding: 16px;
     display: block;
     text-align: center; }
+    #main-nav a:hover {
+      background: #333; }
 
 section h1 {
   font-size: 24px;
-  color: #032f3e; }
+  color: #032f3e;
+  margin-top: 40px; }
 
 .lead-banner {
   width: 100%;
@@ -68,6 +71,28 @@ section h1 {
   .lead-banner span.title {
     font-weight: normal;
     margin-bottom: 30px; }
+
+#services {
+  margin-bottom: 60px; }
+  #services li {
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    width: 33.33333%; }
+  #services img {
+    width: 60%;
+    margin: 20px 20%; }
+  #services a {
+    text-decoration: none;
+    color: #032f3e;
+    font-weigth: bold; }
+    #services a:hover {
+      color: red; }
+  #services ul:after {
+    content: "";
+    display: block;
+    clear: both; }
 
 .lessons-banner {
   width: 100%;
@@ -92,3 +117,13 @@ section h1 {
     font-size: 20px;
     max-width: 500px;
     margin: 60px 0; }
+
+#projects li {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 23.5%; }
+  #projects li:nth-child(4n) {
+    margin-right: 0; }
+  #projects li img {
+    width: 100%; }

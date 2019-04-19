@@ -18,7 +18,7 @@
 	li {
 		justify-content: space-around;
 		flex-direction: row;
-		width: 14%;
+		width: (100%/6);
 	}
 
 	a {
@@ -27,6 +27,9 @@
 		padding: 16px;
 		display: block;
 		text-align: center;
+		&:hover {
+			background: $grey;
+		}
 	}
 }//end of #main-nav
 
@@ -34,6 +37,7 @@
 section h1 {
 	font-size: $sectionHeading;
 	color: $deepBlue;
+	margin-top: 40px;
 }
 
 // banners
@@ -43,6 +47,35 @@ section h1 {
 	text-align: right;
 }
 
+#services {
+	margin-bottom: 60px;
+
+	li {
+		float: left;
+		box-sizing: border-box;
+		text-align: center;
+		width: (100%/3);
+	}
+
+	img {
+		width: 60%;
+		margin: 20px 20%; 
+	}
+
+	a {
+		text-decoration: none;
+		color: $deepBlue;
+		font-weigth: bold;
+		&:hover {
+			color: red;
+		}
+	}
+
+	ul {
+		@include clearfix;
+	}
+}
+
 .lessons-banner {
 	@include banner;
 	li {
@@ -50,6 +83,14 @@ section h1 {
 		font-size: 20px; 
 		max-width: 500px;
 		margin: 60px 0;
+	}
+}
+
+#projects li {
+	@include grid(4, 2%);
+	
+	img {
+		width: 100%;
 	}
 }
 
