@@ -13,12 +13,19 @@
 	ul {
 		width: 100%;
 		display: flex;
+		flex-direction: row;
+		@include mQ(600px) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	li {
 		justify-content: space-around;
-		flex-direction: row;
 		width: (100%/6);
+		@include mQ(600px){
+			width: 100%;
+		}
 	}
 
 	a {
@@ -28,7 +35,7 @@
 		display: block;
 		text-align: center;
 		&:hover {
-			background: $grey;
+			background: lighten($deepBlue, 6);
 		}
 	}
 }//end of #main-nav
@@ -38,6 +45,9 @@ section h1 {
 	font-size: $sectionHeading;
 	color: $deepBlue;
 	margin-top: 40px;
+	@include mQ(300px){
+		font-size: 16px;
+	}
 }
 
 // banners
@@ -55,6 +65,9 @@ section h1 {
 		box-sizing: border-box;
 		text-align: center;
 		width: (100%/3);
+		@include mQ(600px){
+			width: 100%;
+		}
 	}
 
 	img {
@@ -67,7 +80,7 @@ section h1 {
 		color: $deepBlue;
 		font-weigth: bold;
 		&:hover {
-			color: red;
+			color: complement($deepBlue);
 		}
 	}
 
@@ -83,11 +96,25 @@ section h1 {
 		font-size: 20px; 
 		max-width: 500px;
 		margin: 60px 0;
+		@include mQ(600px){
+			font-size: 14px;
+			margin: 15px 0;
+		}
+		@include mQ(300px){
+			font-size: 10px;
+			margin: 5px 0;
+		}
 	}
 }
 
 #projects li {
 	@include grid(4, 2%);
+	@include mQ(600px){
+		@include grid(2, 4%);
+	}
+	@include mQ(300px){
+		@include grid(1, 6%);
+	}
 	
 	img {
 		width: 100%;
