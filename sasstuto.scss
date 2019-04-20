@@ -121,3 +121,22 @@ section h1 {
 	}
 }
 
+#projects {
+	@include clearfix;
+}
+
+footer {
+	background: $deepBlue;
+
+	a{
+		color: $offWhite;
+		font-size: $sectionHeading;
+		text-align: center;
+		display: block;
+		text-decoration: none;
+		padding: 5px 0;
+		@include mQ(300px){
+			font-size: 16px;
+		}
+	}
+}

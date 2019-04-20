@@ -193,3 +193,21 @@ section h1 {
         margin-right: 0; } }
   #projects li img {
     width: 100%; }
+
+#projects:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+footer {
+  background: #032f3e; }
+  footer a {
+    color: #f8f9fb;
+    font-size: 24px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 5px 0; }
+    @media screen and (max-width: 300px) {
+      footer a {
+        font-size: 16px; } }
